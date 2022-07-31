@@ -26,11 +26,26 @@ class Result {
 
     public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
         // Write your code here
-
+        int valueApples;
+        int valueOranges;
+        int resultApple = 0;
+        int resultOranges = 0;
         for (int i = 0; i < apples.size(); i++ ) {
-            
+            valueApples = apples.get(i);
+            valueApples = valueApples + a;
+            if (valueApples >= s && valueApples <= t) {
+                resultApple = resultApple + 1;
+            }
         }
-
+        for (int z = 0; z < oranges.size(); z++) {
+            valueOranges = oranges.get(z);
+            valueOranges = valueOranges + b;
+            if (valueOranges >= s && valueOranges <= t) {
+                resultOranges = resultOranges + 1;
+            }
+        }
+        System.out.println(resultApple);
+        System.out.println(resultOranges);
 
 
     }
